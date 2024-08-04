@@ -16,7 +16,7 @@ async function checkBefore(req, res, next) {
   } else {
     res.status(401).send({
       message:
-        "You can not carry out any action this because you are not the owner of the product",
+        "You can not carry out any action on this because you are not the owner of the product",
     });
   }
 }
@@ -58,10 +58,5 @@ router.delete("/product/:id", checkBefore, async (req, res, next) => { //deletes
     message: "Product has been deleted successfully",
   });
 });
-
-
-
-
-
 
 module.exports = router;

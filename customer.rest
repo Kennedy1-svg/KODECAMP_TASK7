@@ -14,7 +14,7 @@ Content-Type: application/json
 
 {
     "email" : "kennyohia321@gmail.com",
-    "password": "kenny"
+    "password": "kenny6384"
 }
 
 ###
@@ -23,7 +23,7 @@ POST http://localhost:3000/auth/forgot-password
 Content-Type: application/json
 
 {
-    "email" : "kennyohiacustomer@gmail.com"
+    "email" : "kennyohia321@gmail.com"
 }
 
 ###
@@ -32,7 +32,7 @@ POST http://localhost:3000/auth/reset-password
 Content-Type: application/json
 
 {
-    "reset_PasswordToken": "213cfc7d-c2ff-4545-896e-47fdd2c016bc",
+    "reset_PasswordToken": "a7383d07-8c17-43f1-888e-c295e4a32ac4",
     "password" : "kenny6384"
 }
 

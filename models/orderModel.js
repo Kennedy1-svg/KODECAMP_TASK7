@@ -20,10 +20,6 @@ const orderItemSchema = new mongoose.Schema(
 
 const orderSchema = new mongoose.Schema(
   {
-    // order: {
-    //   type: Array,
-    //   required: true,
-    // },
     order: [orderItemSchema],
     user: {
       type: mongoose.Types.ObjectId,
