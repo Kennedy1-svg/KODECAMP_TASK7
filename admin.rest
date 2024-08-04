@@ -1,0 +1,72 @@
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "fullName" : "Mohammed Jnr",
+    "email" : "adenuga@gmail.com",
+    "role" : "admin",
+    "password": "kenny"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email" : "kennyohia@gmail.com",
+    "password": "kenny638"
+}
+
+###
+POST http://localhost:3000/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email" : "kennyohia@gmail.com"
+}
+
+###
+POST http://localhost:3000/auth/reset-password
+Content-Type: application/json
+
+{
+    "reset_PasswordToken": "491b59ba-94de-48f7-9b4e-db7c21ba8a7a",
+    "password" : "kenny638"
+}
+
+###
+
+POST http://localhost:3000/admin/add-product
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmOTkwYTQ1YmI3YTY0ZjdhNjg4ZGQiLCJmdWxsTmFtZSI6Ik1vaGFtbWVkIEpuciIsImVtYWlsIjoiYWRlbnVnYUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjI3ODQwMzV9.9MIKDDa8_Kgy8_cGyZe0thVpC5mPAOPPvkNMNHUPME0
+Content-Type: application/json
+
+{
+    "name": "Tables", 
+    "description": "Buy your best tables here", 
+    "price": 6000
+}
+
+###
+
+PUT http://localhost:3000/admin/product/66af999745bb7a64f7a688e2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmOTkwYTQ1YmI3YTY0ZjdhNjg4ZGQiLCJmdWxsTmFtZSI6Ik1vaGFtbWVkIEpuciIsImVtYWlsIjoiYWRlbnVnYUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MjI3ODQwMzV9.9MIKDDa8_Kgy8_cGyZe0thVpC5mPAOPPvkNMNHUPME0
+Content-Type: application/json
+
+{
+    "name": "Yam", 
+    "description": "Tubers for 50", 
+    "price": 2000
+}
+
+###
+
+GET http://localhost:3000/admin/product/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNmI4YWJjNWM5NGM4MzM4ZTcyMzciLCJmdWxsTmFtZSI6Ik9oaWEgS2VubmVkeSIsImVtYWlsIjoia2VubnlvaGlhQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMjc4NDU2OH0.r56cDUwl6MyEkg4u6_JGaxDsClCxXNObtTV_jJ1wYTw
+
+###
+DELETE http://localhost:3000/admin/product/66af996b45bb7a64f7a688e0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmNmI4YWJjNWM5NGM4MzM4ZTcyMzciLCJmdWxsTmFtZSI6Ik9oaWEgS2VubmVkeSIsImVtYWlsIjoia2VubnlvaGlhQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMjc4NDU2OH0.r56cDUwl6MyEkg4u6_JGaxDsClCxXNObtTV_jJ1wYTw
+
+
+

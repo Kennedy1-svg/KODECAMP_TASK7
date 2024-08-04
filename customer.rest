@@ -1,0 +1,75 @@
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "fullName" : "Gift",
+    "email" : "ekpe@gmail.com",
+    "password": "kennyekpe"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email" : "kennyohia321@gmail.com",
+    "password": "kenny"
+}
+
+###
+
+POST http://localhost:3000/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email" : "kennyohiacustomer@gmail.com"
+}
+
+###
+
+POST http://localhost:3000/auth/reset-password
+Content-Type: application/json
+
+{
+    "reset_PasswordToken": "213cfc7d-c2ff-4545-896e-47fdd2c016bc",
+    "password" : "kenny6384"
+}
+
+###
+GET http://localhost:3000/customer/product/1/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmYjI4OGE3MGQ0NTVhZmQ1YWIyMDkiLCJmdWxsTmFtZSI6Ik9oaWEiLCJlbWFpbCI6Imtlbm55b2hpYTMyMUBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3MjI3OTA5NTh9.VE0t5-jlU5HDKA0ImuRR3zWb5KVIRza-e-u2ciUfOzs
+
+###
+GET http://localhost:3000/customer/product/66af976b45bb7a64f7a688d5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmYjJlNWE3MGQ0NTVhZmQ1YWIyMGIiLCJmdWxsTmFtZSI6IkdpZnQiLCJlbWFpbCI6ImVrcGVAZ21haWwuY29tIiwicm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzIyNzkxMTU5fQ.L0wWkVR2qMFFeyIbBaxNZapEtMlMj7ee-4dCNPvEzGw
+
+###
+POST http://localhost:3000/customer/order
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmYjI4OGE3MGQ0NTVhZmQ1YWIyMDkiLCJmdWxsTmFtZSI6Ik9oaWEiLCJlbWFpbCI6Imtlbm55b2hpYTMyMUBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3MjI3OTQ0MzF9.D-LV6yN0hVmTL_i2ZIOIp0C5AjTa-U-TseXiBYy0DuI
+Content-Type: application/json
+
+{
+    "order": [
+        {
+            "productId" : "66af976b45bb7a64f7a688d5",
+            "quantity" : 2,
+            "totalCost": 8000
+        },
+        {
+            "productId" : "66af6b8abc5c94c8338e7237",
+            "quantity" : 1,
+            "totalCost": 5000
+        },
+        {
+            "productId" : "66af996b45bb7a64f7a688e0",
+            "quantity" : 2,
+            "totalCost": 16000
+        }
+    ]
+}
+
+###
+POST http://localhost:3000/customer/checkout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmFmYjI4OGE3MGQ0NTVhZmQ1YWIyMDkiLCJmdWxsTmFtZSI6Ik9oaWEiLCJlbWFpbCI6Imtlbm55b2hpYTMyMUBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3MjI3OTQ0MzF9.D-LV6yN0hVmTL_i2ZIOIp0C5AjTa-U-TseXiBYy0DuI
+Content-Type: application/json
