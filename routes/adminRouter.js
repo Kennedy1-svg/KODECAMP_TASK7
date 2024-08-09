@@ -28,10 +28,12 @@ router.post("/add-product", async (req, res, next) => { // adds product
     price: req.body.price,
     productOwner: req.userDetails.userId,
   });
+  console.log(newProduct)
 
-  res.send({ 
-    message: 'Product added successfully'
-   });
+  res.status(201).send({
+    message: "Product added successfully",
+    newProduct,
+  });
 });
 
 router.put("/product/:id", checkBefore, async (req, res, next) => { //edits product
@@ -41,7 +43,7 @@ router.put("/product/:id", checkBefore, async (req, res, next) => { //edits prod
 
   const editedProduct = await productModel.findByIdAndUpdate(id,{name, price,description}, { new: true });
 
-  res.send({
+  res.status(201).send({
     message: "Edit successful",
     editedProduct,
   });

@@ -31,7 +31,6 @@ router.get("/product/:id", async (req, res, next) => { //views single product
 });
 
 router.post("/order", async (req, res, next) => { 
-  console.log('what is the issue')
   const orderCreated = await orderModel.create({
     order: req.body.order,
     user: req.userDetails.userId,
@@ -46,9 +45,7 @@ router.post("/order", async (req, res, next) => {
 router.post("/checkout", async (req, res, next) => { //checks out 
   const productsToCheckOut = await orderModel.find({user: req.userDetails.userId});
   console.log("order created by user", productsToCheckOut);
-
   await orderModel.deleteMany({ user: req.userDetails.userId });
-
   res.send({
     message: "Order checked out. Thanks for shopping with us"
   });
