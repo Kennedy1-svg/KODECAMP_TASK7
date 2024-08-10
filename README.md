@@ -28,35 +28,6 @@ This project is an E-Commerce API that allows users to register and log in eithe
 - **BCrypt** (Password hashing)
 - **Jest** (Testing)
 
-
-## Overview
-This project is an E-Commerce API that allows users to register and log in either as an admin or a customer. The API provides functionality for admins to manage products (add, edit, delete, and view products) and for customers to view products, view product details, create orders, and checkout.
-
-## Features
-- **User Management**:
-  - Register as Admin or Customer.
-  - Login for Admin and Customer.
-
-- **Admin Product Management**:
-  - Add new products.
-  - Edit existing products.
-  - Delete products.
-  - View all products added by the logged-in admin.
-
-- **Customer Actions**:
-  - View all products.
-  - View detailed information of a specific product.
-  - Create an order.
-  - Checkout.
-
-## Technologies Used
-- **Node.js**
-- **Express.js** (RESTful API Framework)
-- **MongoDB** with **Mongoose** (Database and ORM)
-- **JWT** (JSON Web Token for authentication)
-- **BCrypt** (Password hashing)
-- **JEST** (Unit Testing)
-
 ## Installation
 
 1. **Clone the repository**:
@@ -170,7 +141,7 @@ This project is an E-Commerce API that allows users to register and log in eithe
   }
     
   ```
-  
+
 - **Checkout**: `POST /customer/checkout`
   - **Description**: Checks out your order and clears your cart.
 
